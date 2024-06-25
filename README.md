@@ -3,7 +3,7 @@ This project is a class assignment on SQL using supermarket dataset from Kaggle.
 In this project, you will find the assignment question and the proposed solutions to questions.
 The objective is to find out if students are having a mastering of basic SQL operations.
 
-# ....ASSIGNMENT..........
+# ASSIGNMENT.
 
 #.Assuming you are a junior data analyst of WinkIT, and your responsibility is to provide accurate data  insights for the cross functional teams. 
 You receive a request from the management in order to support their data-driven decisions, 
@@ -17,13 +17,13 @@ Task 3: The marketing squad is planning a campaign targeting users who have made
 As a data analyst, you are asked to retrieve the data according to the  marketing team's requirements. 
 They also want to know the total payments accruing from each;
 
-# APPROACH OR PROPOSED SOLUTION..........................
+# APPROACH OR PROPOSED SOLUTION.
 
 SELECT * FROM supermarket_data.bookings_data B;
 SELECT * FROM supermarket_data.payments_data P;
 SELECT * FROM supermarket_data.users_data U;
 
-# QUESTION 1...
+# QUESTION 1.
 # We need the following for this question: countries, bookings(exeecuted), id(or status)
 
 SELECT country_code as Country, 
@@ -83,7 +83,7 @@ GROUP BY country_code
 ORDER BY 2, 3, 4 DESC
 LIMIT 10;
 
-# QUESTION 2...
+# QUESTION 2.
 
 SELECT B.user_id, U.country_code as Country, 
 SUM(P.payment_amount) AS Total_payment_amount
@@ -95,7 +95,7 @@ ON U.user_id = P.user_id
 WHERE B.user_id is NULL
 GROUP BY B.user_id, U.country_code;
 
-# QUESTION 3................
+# QUESTION 3.
 
 SELECT * FROM supermarket_data.bookings_data B;
 SELECT * FROM supermarket_data.payments_data P;
